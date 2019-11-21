@@ -1,0 +1,18 @@
+<div class="box-wrapper" [@isChange]="isChanged ? 'onAni' : 'default'">
+  BOX
+</div>
+<button (click)="onChange()">Click To Change Color</button>
+<br><br><br><br>
+
+<h3>Fade-In and Fade-Out animation</h3>
+
+<button (click)="addItem()">Add List</button>
+<button (click)="removeItem()">Remove List</button>
+
+<div style="width:200px; margin-left: 20px">
+  <ul>
+    <li *ngFor="let list of listItems" [@EnterLeave]="flyIn">
+      {{list}}
+    </li>
+  </ul>
+</div>
